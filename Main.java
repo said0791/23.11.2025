@@ -2,18 +2,14 @@ public class Main {
 
     public static void main(String[] args) {
 
-        {
-            System.out.println("Задания 1");
 
-            int firstFriday = 1;
+
+            System.out.println("Задания 1");
             System.out.println("Расписание отчетов за месяц");
 
 
-            for (int day = 1; day <= 31; day++) {
-
-                if ((day - firstFriday) % 7 == 0) {
-                    System.out.println("Сегодня пятница, " + day + "-е число. Необходимо подготовить отчет.");
-                }
+            for (int firstFriday = 5; firstFriday <= 31; firstFriday += 7) {
+                System.out.println("Сегодня пятница, " + firstFriday + "-е число. Необходимо подготовить отчет.");
             }
 
             System.out.println("Задания 2");
@@ -22,24 +18,23 @@ public class Main {
 
 
             int distanse = 0;
-            int Marafon = 500;
+            int marafon = 500;
             int step = 42195;
 
             do {
                 int remaining = step - distanse;
                 System.out.println("Держитесь! Осталось " + remaining + " метров");
-                distanse += Marafon;
+                distanse += marafon;
             } while (distanse <= step);
 
             System.out.println("Версия с For ");
 
-            int marafon = 42195;
-            int Step = 500;
-            for (distanse = 0; distanse >= marafon; distanse += Step) ;
-            int remaining = marafon - distanse;
-            System.out.println("Держитесь! Осталось " + remaining + " метров");
+            int marafonTwo = 42195;
+            int stepTwo = 500;
+            for (distanse = 0; distanse <= marafonTwo; distanse += stepTwo){ ;
+            int remainingTwo = marafonTwo - distanse;
+            System.out.println("Держитесь! Осталось " + remainingTwo + " метров");
 
-            System.out.println("Финиш! Пройдено: " + marafon + " метров");
         }
 
         System.out.println("Задания 3");
@@ -124,6 +119,6 @@ public class Main {
         }
 
         System.out.println("Время зарядки составило " + minute + " минут");
+        }
     }
-}
 
